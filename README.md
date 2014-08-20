@@ -6,19 +6,7 @@ With this plugin, a book can contain interactive quizzes.
 
 ## How to use it?
 
-You can use install it via **NPM**:
-
-```
-$ npm install gitbook-plugin-quizzes
-```
-
-And use it for your book with:
-
-```
-$ gitbook build ./ --plugins=quizzes
-```
-
-:warning: Don't forget to add it to your package.json and book.json.
+This plugin is installed by default with gitbook 1.0.1.
 
 ## Quizzes format
 
