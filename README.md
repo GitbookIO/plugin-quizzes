@@ -8,6 +8,16 @@ With this plugin, a book can contain interactive quizzes.
 
 This plugin is installed by default with gitbook 1.0.1.
 
+To use the quizzes plugin in your Gitbook project, add the `quizzes` plugin to the `book.json` file.
+
+```
+{
+    "plugins": ["quizzes"]
+}
+```
+
+> If you want to use multiple plugins in your project, seperate the plugin names with a comma.  For example: `"plugins": ["quizzes", "exercises"]`.
+
 ## Quizzes format
 
 Quizzes need to start and finish with a separation bar (```---``` or ```***```).
