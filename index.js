@@ -27,7 +27,9 @@ module.exports = {
                 // Select appropriate template
                 var tpl = (this.generator === 'ebook' ? QUIZ_EBOOK_TPL : QUIZ_WEBSITE_TPL);
 
-                return tpl(context);
+                return tpl({
+                    quiz: context
+                });
             }
         }
     },
