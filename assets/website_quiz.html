@@ -3,13 +3,13 @@
 </div>
 
 <div class="message">
-    {% autoescape false %}{{ section.content }}{% endautoescape %}
+    <%= quiz.content %>
 </div>
 
 
-{% for quiz in section.quiz %}
+<% quiz.questions.forEach(function(question, idx) { %>
 <div class="question">
-    <div class="question-header">Question {{ loop.index }} of {{ section.quiz.length }}</div>
+    <div class="question-header">Question <%= idx+1 %> of <%= quiz.questions.length %></div>
 
     <div class="question-content">
         <div class="alert alert-success hidden">
@@ -18,21 +18,21 @@
 
         <div class="alert alert-danger error-message hidden">
             <p><b>Not quite!</b></p>
-            {% autoescape false %}{{ quiz.feedback }}{% endautoescape %}
+            <%= question.feedback %>
         </div>
 
         <div class="question-inner">
-        {% autoescape false %}{{ quiz.base }}{% endautoescape %}
+        <%= question.base %>
         </div>
     </div>
 
     <div class="hidden question-answers">
         <div class="question-inner">
-        {% autoescape false %}{{ quiz.solution }}{% endautoescape %}
+        <%= question.solution %>
         </div>
     </div>
 </div>
-{% endfor %}
+<% }) %>
 
 <div class="buttons">
     <a href="#" class="button size-2 action-submit">Submit</a>
