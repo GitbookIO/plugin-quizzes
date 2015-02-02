@@ -9,7 +9,7 @@
     "dependencies": {
         "lodash": "3.0.1",
 
-        "kramed": "0.4.4",
+        "kramed": "0.4.5",
         "kramed-markdown-renderer": "0.1.1"
     },
     "homepage": "https://github.com/GitbookIO/plugin-quizzes",
