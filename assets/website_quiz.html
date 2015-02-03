@@ -1,0 +1,44 @@
+<section class="quiz">
+
+<div class="header">
+    <h2>Quiz</h2>
+</div>
+
+<div class="message">
+    <%= quiz.content %>
+</div>
+
+
+<% quiz.questions.forEach(function(question, idx) { %>
+<div class="question">
+    <div class="question-header">Question <%= idx+1 %> of <%= quiz.questions.length %></div>
+
+    <div class="question-content">
+        <div class="alert alert-success hidden">
+            <b>Correct!</b>
+        </div>
+
+        <div class="alert alert-danger error-message hidden">
+            <p><b>Not quite!</b></p>
+            <%= question.feedback %>
+        </div>
+
+        <div class="question-inner">
+        <%= question.base %>
+        </div>
+    </div>
+
+    <div class="hidden question-answers">
+        <div class="question-inner">
+        <%= question.solution %>
+        </div>
+    </div>
+</div>
+<% }) %>
+
+<div class="buttons">
+    <a href="#" class="button size-2 action-submit">Submit</a>
+    <a href="#" class="button size-2 action-solution">Solution</a>
+</div>
+
+</section>

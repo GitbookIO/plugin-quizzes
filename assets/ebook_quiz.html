@@ -1,0 +1,18 @@
+<section class="quiz">
+
+<div class="exercise-header">Quiz</div>
+<div class="exercise-inner"><%= quiz.content %></div>
+<% quiz.questions.forEach(function(question, idx) { %>
+<div class="question exercise-inner">
+    <div class="question-header">Question <%= idx+1 %> of <%= quiz.questions.length %></div>
+
+    <div class="question-base">
+    <%= question.base %>
+    </div>
+    <div class="question-solution">
+    <%= question.solution %>
+    </div>
+</div>
+<% }) %>
+
+</section>
